@@ -40,13 +40,14 @@ class SubjectController extends Controller
 		echo $this->render('form', ['model' => $model]);
 	}
 	
-	public function actionUpdate()
+	public function actionUpdate($id)
 	{
-		$model = new Subject;
+		$model = Subject::findOne($id);
 		if($oldParent = $model->ancestors(1)->one()){
 			$model->parent = $oldParent = $oldParent->id;
 		}
-		if($model->load($_POST) && $model->saveNode()){
+		if($model->load($_POST)){
+			$model->saveNode();
 			if($oldParent != $model->parent){
 				$model->moveAsLast(Subject::findOne($model->parent));
 			}
@@ -55,9 +56,9 @@ class SubjectController extends Controller
 		echo $this->render('form', ['model' => $model]);
 	}
 	
-	public function actionDelete()
+	public function actionDelete($id)
 	{
-		if(Subject::findOne($id)->delete()){
+		if(Subject::findOne($id)->deleteNode()){
 			Yii::$app->session->setFlash('success', 'That subject was deleted!');
 		}else{
 			Yii::$app->session->setFlash('error', 'That subject could not be deleted for some reason, dunno why');

@@ -47,7 +47,7 @@ class Subject extends ActiveRecord
 		$q->andFilterWhere(['like', 'root', $this->root]);
 		$q->andFilterWhere(['like', 'level', $this->level]);
 		
-		$q->orderby(['root' => SORT_ASC]);
+		$q->orderby(['lft' => SORT_ASC]);
 		
 		return new ActiveDataProvider([
 			'query' => $q
