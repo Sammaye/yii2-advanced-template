@@ -1,7 +1,8 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
     "hash": "1d10413b72d0e2030246d8289298a7fa",
     "packages": [
@@ -50,7 +51,7 @@
                     "name": "Carsten Brandt",
                     "email": "mail@cebe.cc",
                     "homepage": "http://cebe.cc/",
-                    "role": "Creator"
+                    "role": "Core framework development"
                 }
             ],
             "description": "A super fast highly extensible markdown parser for PHP",
@@ -212,12 +213,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "e37e06d73e8823c3e5fc062ae68d9d131c4c2bb4"
+                "reference": "9f5660c3e3b3d392529d07c4f2cfe0aba2abbe89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e37e06d73e8823c3e5fc062ae68d9d131c4c2bb4",
-                "reference": "e37e06d73e8823c3e5fc062ae68d9d131c4c2bb4",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/9f5660c3e3b3d392529d07c4f2cfe0aba2abbe89",
+                "reference": "9f5660c3e3b3d392529d07c4f2cfe0aba2abbe89",
                 "shasum": ""
             },
             "replace": {
@@ -255,7 +256,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-09-01 19:48:19"
+            "time": "2014-09-07 04:25:33"
         },
         {
             "name": "yiisoft/jquery",
@@ -286,12 +287,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/jquery-pjax.git",
-                "reference": "1712c0fc794d622c57a3b0d1d450f416a63603f0"
+                "reference": "98caa41b39c0d8ab6fd4451ed249de7c0d05256a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/1712c0fc794d622c57a3b0d1d450f416a63603f0",
-                "reference": "1712c0fc794d622c57a3b0d1d450f416a63603f0",
+                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/98caa41b39c0d8ab6fd4451ed249de7c0d05256a",
+                "reference": "98caa41b39c0d8ab6fd4451ed249de7c0d05256a",
                 "shasum": ""
             },
             "require": {
@@ -304,7 +305,7 @@
             ],
             "description": "pushState + ajax = pjax, a forked maintainted by the Yii Framework core developers",
             "homepage": "https://github.com/yiisoft/jquery-pjax#readme",
-            "time": "2014-08-27 20:58:57"
+            "time": "2014-09-02 18:40:28"
         },
         {
             "name": "yiisoft/yii2",
@@ -312,12 +313,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "ae954dd3634ca55195dbeddd162d606de5bd72e6"
+                "reference": "1a1a38019e70589fefd91ea1a4e5677faa8dd4ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ae954dd3634ca55195dbeddd162d606de5bd72e6",
-                "reference": "ae954dd3634ca55195dbeddd162d606de5bd72e6",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/1a1a38019e70589fefd91ea1a4e5677faa8dd4ea",
+                "reference": "1a1a38019e70589fefd91ea1a4e5677faa8dd4ea",
                 "shasum": ""
             },
             "require": {
@@ -385,7 +386,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-09-01 14:40:48"
+            "time": "2014-09-07 16:40:50"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -393,12 +394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "0bdbf0d9019adcf0ddf3e48284f34b1e8a7a72f4"
+                "reference": "a3ab453aa0d5e0b493207928ea220e83a6a0ae69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/0bdbf0d9019adcf0ddf3e48284f34b1e8a7a72f4",
-                "reference": "0bdbf0d9019adcf0ddf3e48284f34b1e8a7a72f4",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/a3ab453aa0d5e0b493207928ea220e83a6a0ae69",
+                "reference": "a3ab453aa0d5e0b493207928ea220e83a6a0ae69",
                 "shasum": ""
             },
             "require": {
@@ -426,7 +427,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2014-08-28 20:28:03"
+            "time": "2014-09-05 17:37:52"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -434,12 +435,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "94b8a7fce81ca0c2ba94bac2c1f4d3b039ac6cf2"
+                "reference": "f205416b9e4698af823c4ea6ec661a847188d5cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/94b8a7fce81ca0c2ba94bac2c1f4d3b039ac6cf2",
-                "reference": "94b8a7fce81ca0c2ba94bac2c1f4d3b039ac6cf2",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/f205416b9e4698af823c4ea6ec661a847188d5cf",
+                "reference": "f205416b9e4698af823c4ea6ec661a847188d5cf",
                 "shasum": ""
             },
             "require": {
@@ -470,7 +471,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2014-08-12 01:42:09"
+            "time": "2014-09-03 03:17:50"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -546,7 +547,8 @@
             "authors": [
                 {
                     "name": "Chris Boulton",
-                    "homepage": "http://github.com/chrisboulton"
+                    "homepage": "http://github.com/chrisboulton",
+                    "role": "Original developer"
                 }
             ],
             "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
@@ -640,12 +642,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "02dd7370206c4416678b21bc5f77dfa24a192165"
+                "reference": "3062e56767747143d75553d52795e048959dfee0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/02dd7370206c4416678b21bc5f77dfa24a192165",
-                "reference": "02dd7370206c4416678b21bc5f77dfa24a192165",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/3062e56767747143d75553d52795e048959dfee0",
+                "reference": "3062e56767747143d75553d52795e048959dfee0",
                 "shasum": ""
             },
             "require": {
@@ -675,7 +677,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2014-08-28 20:28:03"
+            "time": "2014-09-03 18:09:30"
         }
     ],
     "aliases": [
@@ -685,6 +687,7 @@
     "stability-flags": [
 
     ],
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.4.0"
     },
