@@ -4,7 +4,7 @@ namespace frontend\tests\unit\models;
 
 use Yii;
 use frontend\tests\unit\DbTestCase;
-use frontend\models\PasswordResetRequestForm;
+use common\models\PasswordResetRequestForm;
 use common\tests\fixtures\UserFixture;
 use common\models\User;
 

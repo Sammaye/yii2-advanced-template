@@ -8,6 +8,10 @@ return [
             'password' => '',
             'charset' => 'utf8',
         ],
+        'mongodb' => [
+            'class' => '\yii\mongodb\Connection',
+            'dsn' => 'mongodb://localhost:27017/test',
+        ],
         'mail' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',
