@@ -19,7 +19,8 @@
 		"yiisoft/yii2-mongodb": "*",
 		"bower-asset/jquery": "~1.11@stable",
 		"bower-asset/jquery-ui": "~1.11@stable",
-		"yiisoft/yii2-jui": "*"
+		"yiisoft/yii2-jui": "*",
+		"yiisoft/yii2-imagine": "*"
 	},
 	"require-dev": {
 		"yiisoft/yii2-codeception": "*",
