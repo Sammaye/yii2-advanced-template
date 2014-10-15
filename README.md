@@ -16,7 +16,11 @@ First I will talk abut the structure and then I will delve into the things I hav
 This guide is intended for those who already know Yii 2 and the structure of a normal advanced application. If you are not one of those individuals [please investigate their 
 readme first](https://github.com/yiisoft/yii2/blob/master/apps/advanced/README.md).
 
-# DIRECTORY STRUCTURE
+- [Github Repository](https://github.com/Sammaye/yii2-advanced-template)
+- [Packagist Entry](https://packagist.org/packages/sammaye/yii2-advanced-template)
+- [Issue Tracker](https://github.com/Sammaye/yii2-advanced-template/issues)
+
+# Directory Structure
 
 ```
 common
@@ -102,8 +106,7 @@ Now moved to `common/models`.
 
 Now moved to `common/models`.
 
-
-# COMPOSER
+# Composer
 
 Composer has been changed. What it installs by default has been expanded and/or changed.
 
@@ -117,7 +120,7 @@ Here is a brief but comphrensive list of changes in composer:
 - `yii2-jui` extension has been added
 - `yii2-imagine` has been added for image manipulation capabilities
 
-# CONFIGURATION
+# Configuration
 
 It is important to get to grips with the configuration and how it is laid out before you start fiddling.
 
@@ -146,13 +149,13 @@ The `params.php` files tends to hold varibles which are helpful, these should be
 
 Some of the configuration is defined within the environments folder too, essentially the database, for example: SQL and MongoDB are both defined in the environments folder's own configuration files.
 
-# CONTROLLERS
+# Controllers
 
 All controllers now inherit from `common\components\Controller` which provides tier 2 functionality, which will be discussed later.
 
 The `common\components\Controller` class runs a `beforeAction` event which can be expanded with your own functionality.
 
-# FEATURES
+# Features
 
 ## common\models\Request
 
