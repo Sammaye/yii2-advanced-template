@@ -129,16 +129,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.1.32",
+            "version": "3.1.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-                "reference": "bb776eb7e7be594fa77d5598e6f89d96029a8bac"
+                "reference": "0c6ce85c1bc12e81ecb0df62fbc62db116b7b53d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/bb776eb7e7be594fa77d5598e6f89d96029a8bac",
-                "reference": "bb776eb7e7be594fa77d5598e6f89d96029a8bac",
+                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/0c6ce85c1bc12e81ecb0df62fbc62db116b7b53d",
+                "reference": "0c6ce85c1bc12e81ecb0df62fbc62db116b7b53d",
                 "shasum": ""
             },
             "require": {
@@ -510,12 +510,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "4b46a68dfbddcba32b94c49821e505aa3e1ef1c9"
+                "reference": "232701b45b343cccae89fa7ca192805a5e9a5f1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/4b46a68dfbddcba32b94c49821e505aa3e1ef1c9",
-                "reference": "4b46a68dfbddcba32b94c49821e505aa3e1ef1c9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/232701b45b343cccae89fa7ca192805a5e9a5f1a",
+                "reference": "232701b45b343cccae89fa7ca192805a5e9a5f1a",
                 "shasum": ""
             },
             "require": {
@@ -590,7 +590,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-10-14 13:36:43"
+            "time": "2014-10-15 13:41:40"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -785,12 +785,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-mongodb.git",
-                "reference": "bd7a4549e90dc29925d247bda7fb6d1425e6a534"
+                "reference": "df58f710486c32e8af7884457381fda4520a8d6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-mongodb/zipball/bd7a4549e90dc29925d247bda7fb6d1425e6a534",
-                "reference": "bd7a4549e90dc29925d247bda7fb6d1425e6a534",
+                "url": "https://api.github.com/repos/yiisoft/yii2-mongodb/zipball/df58f710486c32e8af7884457381fda4520a8d6a",
+                "reference": "df58f710486c32e8af7884457381fda4520a8d6a",
                 "shasum": ""
             },
             "require": {
@@ -801,8 +801,7 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.0.x-dev"
-                },
-                "bootstrap": "yii\\mongodb\\debug\\MongoDbPanel"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -826,7 +825,7 @@
                 "mongodb",
                 "yii2"
             ],
-            "time": "2014-10-15 10:51:51"
+            "time": "2014-10-15 14:02:45"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
