@@ -10,9 +10,10 @@ class Request extends \yii\web\Request
 	 * By default CSRF will be turned on but disabled for all actions.
 	 * This will turn Allow CSRF to run on certain actions, for example put add "user/login" as 
 	 * an element in this array to have CSRF run there
-	 * @var unknown
 	 */
 	public $csrfRoutes = [];
+	
+	public $enableSslRoutes = true;
 	
 	/**
 	 * For a site that is not completely SSL you define SSL routes, i.e.: site/login

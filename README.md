@@ -13,6 +13,9 @@ Maybe it will help someone.
 
 First I will talk abut the structure and then I will delve into the things I have done. I will attempt to explain it concisely however, it is likely I may miss things out.
 
+This guide is intended for those who already know Yii 2 and the structure of a normal advanced application. If you are not one of those individuals [please investigate their 
+readme first](https://github.com/yiisoft/yii2/blob/master/apps/advanced/README.md).
+
 # DIRECTORY STRUCTURE
 
 ```
