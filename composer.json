@@ -1,8 +1,8 @@
 {
-	"name": "sammaye/yii2-test",
-	"description": "Yii 2 test application for some awesome stuffs.",
-	"keywords": ["yii2"],
-	"homepage": "http://www.yiiframework.com/",
+	"name": "sammaye/yii2-advanced-template",
+	"description": "A template for awesomeness.",
+	"keywords": ["yii2", "framework", "advanced", "application template"],
+	"homepage": "http://www.sammaye.wordpress.com/",
 	"type": "project",
 	"license": "BSD-3-Clause",
 	"support": {
