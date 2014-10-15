@@ -1,6 +1,7 @@
 <?php
 namespace common\models;
 
+use Yii;
 use yii\base\NotSupportedException;
 use yii\mongodb\ActiveRecord;
 use yii\base\Security;
@@ -75,7 +76,6 @@ class User extends ActiveRecord implements IdentityInterface
 			'status',
 			'created_at',
 			'updated_at',
-			'password'
      	];
      }
 
@@ -105,28 +105,38 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return static::findOne(['email' => $email, 'status' => self::STATUS_ACTIVE]);
     }
-
-    /**
-     * Finds user by password reset token
-     *
-     * @param  string      $token password reset token
-     * @return static|null
-     */
-    public static function findByPasswordResetToken($token)
-    {
-        $expire = \Yii::$app->params['user.passwordResetTokenExpire'];
-        $parts = explode('_', $token);
-        $timestamp = (int) end($parts);
-        if ($timestamp + $expire < time()) {
-            // token expired
-            return null;
-        }
-
-        return static::findOne([
-            'password_reset_token' => $token,
-            'status' => self::STATUS_ACTIVE,
-        ]);
-    }
+	
+	/**
+	 * Finds user by password reset token
+	 *
+	 * @param string $token password reset token
+	 * @return static null
+	 */
+	public static function findByPasswordResetToken($token) {
+		if (! static::isPasswordResetTokenValid($token)) {
+			return null;
+		}
+		return static::findOne([ 
+				'password_reset_token' => $token,
+				'status' => self::STATUS_ACTIVE 
+		]);
+	}
+	
+	/**
+	 * Finds out if password reset token is valid
+	 *
+	 * @param string $token password reset token
+	 * @return boolean
+	 */
+	public static function isPasswordResetTokenValid($token) {
+		if (empty($token)){
+			return false;
+		}
+		$expire = Yii::$app->params['user.passwordResetTokenExpire'];
+		$parts = explode( '_', $token );
+		$timestamp = (int)end($parts);
+		return $timestamp + $expire >= time();
+	}
 
     /**
      * @inheritdoc
@@ -186,7 +196,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function generatePasswordResetToken()
     {
-        $this->password_reset_token = \Yii::$app->security->generateRandomKey() . '_' . time();
+        $this->password_reset_token = \Yii::$app->security->generateRandomString() . '_' . time();
     }
 
     /**
