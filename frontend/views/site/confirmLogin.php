@@ -13,8 +13,8 @@ echo Alert::widget();
 ?>
 <div class="site-login">
 	<div class="row">
-		<div class="col-sm-20">
-			<h1><?= Html::encode('Please login') ?></h1>
+		<div class="col-sm-6">
+			<h2><?= Html::encode('Please login') ?></h2>
 
 			<?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => false]); ?>
 				<?= $form->field($model, 'email') ?>
@@ -27,6 +27,10 @@ echo Alert::widget();
 					<?= Html::submitButton('Login', ['class' => 'btn btn-success btn-lg']) ?>
 				</div>
 			<?php ActiveForm::end(); ?>
+		</div>
+		<div class="col-sm-6">
+		<h2>New User</h2>
+		<?= Html::a('Continue', ['site/signup'], ['class' => 'btn btn-lg btn-success']) ?>
 		</div>
 	</div>
 </div>
