@@ -30,9 +30,4 @@ class Request extends \yii\web\Request
 		}
 		return parent::validateCsrfToken();
 	}
-
-	public function getHttp()
-	{
-		return $this->getIsSecureConnection() ? 'https' : 'http';
-	}
 }
