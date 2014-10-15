@@ -17,8 +17,17 @@ return [
             'enableAutoLogin' => true,
         ],
         'request' => [
-			'cookieValidationKey' => 'poop'
-		],
+        	'class' => 'common\components\Request',
+        	'enableCsrfValidation' => true,
+        	'csrfRoutes' => [
+		        'site/login',
+		        'site/signup',
+		        'site/request-password-reset',
+		        'site/reset-password',
+		        'site/confirm-login'
+        	],
+        	'cookieValidationKey' => $params['request.cookieValidationKey']
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
