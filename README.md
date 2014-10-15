@@ -5,11 +5,11 @@ This is a template for the Yii 2 advanced application which I have decided to re
 
 **But why?**
 
+Maybe it will help someone.
+
 This template was born out of a number of a projects, including an e-commerce site. Covering a common set of functionality I kept implementing between them.
 
 I also seemed to always do this very repetitively as such I sought to remedy that. It incorporates what I feel is a good structure, this does, of course, make it opinionated but might give you pointers as well; might even be exactly what your looking for.
-
-Maybe it will help someone.
 
 First I will talk abut the structure and then I will delve into the things I have done. I will attempt to explain it concisely however, it is likely I may miss things out.
 
@@ -22,43 +22,41 @@ readme first](https://github.com/yiisoft/yii2/blob/master/apps/advanced/README.m
 
 # Directory Structure
 
-```
-common
-	components/			contains all of the extended components of the framework
-	config/				contains shared configurations
-	mail/				contains view/template files for e-mails
-	rbac/				contains the role based permissions configuration
-	models/				contains model classes used in both backend and frontend
-	tests/				contains various tests for objects that are common among applications
-	widgets/			contains widgets common to both back and front end
-console
-	config/				contains console configurations
-	controllers/		contains console controllers (commands)
-	migrations/			contains database migrations
-	models/				contains console-specific model classes
-	runtime/			contains files generated during runtime
-	tests/				contains various tests for the console application
-backend
-	assets/				contains application assets such as JavaScript and CSS
-	config/				contains backend configurations
-	controllers/		contains Web controller classes
-	models/				contains backend-specific model classes (Does not actually exist)
-	runtime/			contains files generated during runtime
-	tests/				contains various tests for the backend application
-	views/				contains view files for the Web application
-	web/				contains the entry script and Web resources
-frontend
-	assets/				contains application assets such as JavaScript and CSS
-	config/				contains frontend configurations
-	controllers/		contains Web controller classes
-	models/				contains frontend-specific model classes (Does not actually exist)
-	runtime/			contains files generated during runtime
-	tests/				contains various tests for the frontend application
-	views/				contains view files for the Web application
-	web/				contains the entry script and Web resources
-vendor/					contains dependent 3rd-party packages
-environments/			contains environment-based overrides
-```
+	common
+		components/			contains all of the extended components of the framework
+		config/				contains shared configurations
+		mail/				contains view/template files for e-mails
+		rbac/				contains the role based permissions configuration
+		models/				contains model classes used in both backend and frontend
+		tests/				contains various tests for objects that are common among applications
+		widgets/			contains widgets common to both back and front end
+	console
+		config/				contains console configurations
+		controllers/		contains console controllers (commands)
+		migrations/			contains database migrations
+		models/				contains console-specific model classes
+		runtime/			contains files generated during runtime
+		tests/				contains various tests for the console application
+	backend
+		assets/				contains application assets such as JavaScript and CSS
+		config/				contains backend configurations
+		controllers/		contains Web controller classes
+		models/				contains backend-specific model classes (Does not actually exist)
+		runtime/			contains files generated during runtime
+		tests/				contains various tests for the backend application
+		views/				contains view files for the Web application
+		web/				contains the entry script and Web resources
+	frontend
+		assets/				contains application assets such as JavaScript and CSS
+		config/				contains frontend configurations
+		controllers/		contains Web controller classes
+		models/				contains frontend-specific model classes (Does not actually exist)
+		runtime/			contains files generated during runtime
+		tests/				contains various tests for the frontend application
+		views/				contains view files for the Web application
+		web/				contains the entry script and Web resources
+	vendor/					contains dependent 3rd-party packages
+	environments/			contains environment-based overrides
 
 ## Structure Changes
 
@@ -129,11 +127,11 @@ Most of the configuration is placed within `common/config/main.php` however a si
 The `common/config/main.php` contains:
 
 - Url Manager
-- user
-- session
-- cache
-- request
-- mailer
+- User
+- Session
+- Cache
+- Request
+- Mailer
 - Asset Manager
 - RBAC
 
@@ -169,17 +167,17 @@ This is more fine grain than disabling CSRF on entire controllers which is curre
 
 An example taken from `frontend/config/main.php`:
 
-    'request' => [
-      	'class' => 'common\components\Request',
-       	'enableCsrfValidation' => true,
-       	'csrfRoutes' => [
-	        'site/login',
-	        'site/signup',
-	        'site/request-password-reset',
-	        'site/reset-password',
-	        'site/confirm-login'
-       	]
-    ],
+	'request' => [
+		'class' => 'common\components\Request',
+		'enableCsrfValidation' => true,
+		'csrfRoutes' => [
+			'site/login',
+			'site/signup',
+			'site/request-password-reset',
+			'site/reset-password',
+			'site/confirm-login'
+		]
+	],
 
 This will make the CSRF work on those routes. It is important to also define `enableCsrfValidation` to ensure it works within Yii 2 itself.
 
@@ -199,10 +197,10 @@ You will see an example of this on your local Amazon site, in my case Amazon.co.
 
 These logins are disabled on the backend by default but enabled on the frontend,. via the configuration in `frontend/config/main.php`:
 
-    'user' => [
-        'enableTier2' => true,
-        'tier2Timeout' => 3600 /* 10 mins */
-    ]
+	'user' => [
+		'enableTier2' => true,
+		'tier2Timeout' => 3600 /* 10 mins */
+	]
 
 As you can see the configuration is applied to the user object. By default the user component in this application template is `common\components\User`.
 
@@ -274,20 +272,20 @@ I find this the best option since I always want to apply my own variables and th
 
 This is facilitated by the configuration within the `common/config/main.php` file:
 
-    'assetManager' => [
-	    'bundles' => [
-	        'yii\bootstrap\BootstrapAsset' => [
-		        'basePath' => '@webroot',
-		        'baseUrl' => '@web',
-		        'sourcePath' => null,
-	        ],
-	        'yii\bootstrap\BootstrapPluginAsset' => [
-		        'basePath' => '@webroot',
-		        'baseUrl' => '@web',
-		        'sourcePath' => null,
-	        ]
-	    ],
-    ]
+	'assetManager' => [
+		'bundles' => [
+			'yii\bootstrap\BootstrapAsset' => [
+				'basePath' => '@webroot',
+				'baseUrl' => '@web',
+				'sourcePath' => null,
+			],
+			'yii\bootstrap\BootstrapPluginAsset' => [
+				'basePath' => '@webroot',
+				'baseUrl' => '@web',
+				'sourcePath' => null,
+			]
+		],
+	]
 
 and also exists within the asset compressor configuration file.
 
@@ -311,6 +309,6 @@ exist in both frontend and backend. As states above in "common/models` section I
 
 You can easily remove MongoDB from this template by removing the etension line from composer and then running:
 
-    php ./composer.phar update
+	php ./composer.phar update
 
 and then "grep"-ing for `yii/mongodb/ActiveRecord` and replacing it with `yii/db/ActiveRecord`.
