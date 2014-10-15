@@ -9,7 +9,7 @@ use common\models\SignupForm;
 use frontend\models\ContactForm;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
-use yii\web\Controller;
+use common\components\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 

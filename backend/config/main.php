@@ -13,10 +13,6 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
-        'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
-        ],
         'request' => [
         	'class' => 'common\components\Request',
         	'enableCsrfValidation' => true,

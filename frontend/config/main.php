@@ -13,8 +13,8 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
+            'enableTier2' => true,
+            'tier2Timeout' => 3600 /* 10 mins */
         ],
         'request' => [
         	'class' => 'common\components\Request',
