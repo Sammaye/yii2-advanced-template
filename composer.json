@@ -1,35 +1,31 @@
 {
-	"name": "yiisoft/yii2-app-advanced",
-	"description": "Yii 2 Advanced Application Template",
-	"keywords": ["yii2", "framework", "advanced", "application template"],
+	"name": "sammaye/yii2-test",
+	"description": "Yii 2 test application for some awesome stuffs.",
+	"keywords": ["yii2"],
 	"homepage": "http://www.yiiframework.com/",
 	"type": "project",
 	"license": "BSD-3-Clause",
 	"support": {
-		"issues": "https://github.com/yiisoft/yii2/issues?state=open",
-		"forum": "http://www.yiiframework.com/forum/",
-		"wiki": "http://www.yiiframework.com/wiki/",
-		"irc": "irc://irc.freenode.net/yii",
-		"source": "https://github.com/yiisoft/yii2"
+		"issues": "https://github.com/Sammaye/yii2-test/issues",
+		"source": "https://github.com/Sammaye/yii2-test"
 	},
 	"minimum-stability": "dev",
 	"require": {
 		"php": ">=5.4.0",
+		"fxp/composer-asset-plugin": "1.0.*@dev",
 		"yiisoft/yii2": "*",
 		"yiisoft/yii2-bootstrap": "*",
 		"yiisoft/yii2-swiftmailer": "*",
-		"sammaye/nestedsetbehavior": "*"
+		"yiisoft/yii2-mongodb": "*",
+		"bower-asset/jquery": "~1.11@stable",
+		"bower-asset/jquery-ui": "~1.11@stable",
+		"yiisoft/yii2-jui": "*"
 	},
 	"require-dev": {
 		"yiisoft/yii2-codeception": "*",
 		"yiisoft/yii2-debug": "*",
-		"yiisoft/yii2-gii": "*"
-	},
-	"suggest": {
-		"codeception/codeception": "Codeception, 1.8.*@dev is currently works well with Yii.",
-		"codeception/specify": "BDD style code blocks for PHPUnit and Codeception",
-		"codeception/verify": "BDD Assertions for PHPUnit and Codeception",
-		"yiisoft/yii2-faker": "Fixtures generator for Yii2 based on Faker lib"
+		"yiisoft/yii2-gii": "*",
+		"yiisoft/yii2-faker": "*"
 	},
 	"scripts": {
 		"post-create-project-cmd": [
@@ -46,6 +42,11 @@
 
 			"frontend/runtime",
 			"frontend/web/assets"
-		]
+		],
+		
+		"asset-installer-paths": {
+			"npm-asset-library": "vendor/npm",
+			"bower-asset-library": "vendor/bower"
+		}
 	}
 }
