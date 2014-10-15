@@ -6,5 +6,8 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'request' => [
+        	'enableCsrfValidation' => false
+        ]
     ],
 ];
