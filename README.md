@@ -291,6 +291,10 @@ Within the `frontend/config/assets.php` is placed an example file which will wor
 
 This will in turn compress to the specification defined within the `common/wigets/AllAssets.php` file.
 
+### Sign in by email address
+
+I have changed the login form to work by email address instead of username. This seems far more appropiate for many sites where quite a lot of time you don't actually take a username.
+
 ## Sign up, Login and Reset Password
 
 All of the user normal user functions of:
