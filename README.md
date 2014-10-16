@@ -20,7 +20,7 @@ readme first](https://github.com/yiisoft/yii2/blob/master/apps/advanced/README.m
 - [Packagist Entry](https://packagist.org/packages/sammaye/yii2-advanced-template)
 - [Issue Tracker](https://github.com/Sammaye/yii2-advanced-template/issues)
 
-# Directory Structure
+## Directory Structure
 
 	common
 		components/			contains all of the extended components of the framework
@@ -58,29 +58,29 @@ readme first](https://github.com/yiisoft/yii2/blob/master/apps/advanced/README.m
 	vendor/					contains dependent 3rd-party packages
 	environments/			contains environment-based overrides
 
-## Structure Changes
+### Structure Changes
 
 The directory structure has changed a little to a version that I have tested as being quite good. The main changes revolve around moving stuff to the `common/` folder. `common/` holds all of the stuff that is common to the application globally. 
 
-### common/components/
+#### common/components/
 
 `components/` holds all of the extended Yii 2 components such as custom `Controller`, `User` and `Request` objects.
 
 You can put extensions in here but you may find it better to put them in an `extensions/` folder, it is entirely up to your better judgement.
 
-### common/mail/
+#### common/mail/
 
 This folder contains all the stuff for mail, from templates to view files.
 
 The mail templates and views are strictly global to the entire application.
 
-### common/rbac/
+#### common/rbac/
 
 This folder contains the RBAC configuration including rule classes. 
 
 Again this is global across the entire application.
 
-### common/models/
+#### common/models/
 
 I have made all models reside in `common/models` including the `SignupForm.php`, `PasswordResetRequestForm.php` and the `ResetPasswordForm.php`.
 
@@ -90,21 +90,21 @@ day of work registering a new account in your system.
 
 This means that the `models/` folder in both backend and frontend do not actually exist, but they can if you really need them to.
 
-### common/widgets/
+#### common/widgets/
 
 This folder contains global widgets.
 
 There are a number of widgets you may find are actually global to your entire application, for example: I have already added the `Alert` widget as a global widget and added it to both the frontend and the backend layout.
 
-### frontend/models/
+#### frontend/models/
 
 Now moved to `common/models`.
 
-### backend/models/
+#### backend/models/
 
 Now moved to `common/models`.
 
-# Composer
+## Composer
 
 Composer has been changed. What it installs by default has been expanded and/or changed.
 
@@ -118,7 +118,7 @@ Here is a brief but comprehensive list of changes in composer:
 - `yii2-jui` extension has been added
 - `yii2-imagine` has been added for image manipulation capabilities
 
-# Configuration
+## Configuration
 
 It is important to get to grips with the configuration and how it is laid out before you start fiddling.
 
@@ -145,17 +145,17 @@ The `params.php` files tends to hold varibles which are helpful. These files are
 
 Some of the configuration is defined within the environments folder too, essentially the database, for example: SQL and MongoDB are both defined in the environments folder's own configuration files.
 
-# Controllers
+## Controllers
 
 All controllers now inherit from `common\components\Controller` which provides tier 2 functionality and SSL redirects, which will be discussed later.
 
 The `common\components\Controller` class runs a `beforeAction` event which can be expanded with your own functionality.
 
-# Features
+## Features
 
-## common\models\Request
+### common\models\Request
 
-### CSRF Routes
+#### CSRF Routes
 
 I found more and more that in a real production environment CSRFs on every action were causing problems, especially on e-commerce sites. Mainly the problems revolved around the fact that not everyone posted to the website with CSRF tokens, especially if they came in from marketing campaigns such as Google AdWords or emails.
 
@@ -179,7 +179,7 @@ An example taken from `frontend/config/main.php`:
 
 The above will make the CSRF work only on those routes. It is important to also define `enableCsrfValidation` to ensure it works within Yii 2 itself.
 
-### SSL Routes
+#### SSL Routes
 
 When your site cannot entirely run over SSL you may wish to define certain routes as SSL only, for example: with this template you may wish to define that `site/login`, `site/signup` and `user/index` are SSL routes.
 
@@ -187,7 +187,7 @@ Just like above, for CSRF routes, you can define these by filling a property of 
 
 The SSL route will be redirected within the `common\components\Controller` `beforeAction` event.
 
-### Tier 2 Logins
+#### Tier 2 Logins
 
 Tier 2 logins can be very helpful for e-commerce sites that wish to keep the user logged in but do not wish to leave them with he ability to order items without being securely logged in.
 
@@ -237,7 +237,7 @@ The `tier2User` role relates to RBAC and runs the rule at `common/rbac/Tier2Rule
 
 If the user is found to not be tier 2 logged they are redirected to `site/confirm-login`.
 
-## RBAC
+### RBAC
 
 The RBAC that is in place is done via the `common\components\PhpManager` and essentially works by adding a role field to a user which contains a role.
 
@@ -260,7 +260,7 @@ The default role applied to all new users will be `user` and it will be saved as
 
 The default role applied to any non-logged in user of your site will be `guest`.
 
-## Customised Bootstrap Assets
+### Customised Bootstrap Assets
 
 Both frontend and backend have their own Bootstrap contained within their respective `web` folder.
 
@@ -285,13 +285,13 @@ This is facilitated by the configuration within the `common/config/main.php` fil
 
 and also exists within the asset compressor configuration file.
 
-## Compressing Assets
+### Compressing Assets
 
 Within the `frontend/config/assets.php` is placed an example file which will work with the assets compressor command to allow you to compress your assets.
 
 This will in turn compress to the specification defined within the `common/wigets/AllAssets.php` file.
 
-# Sign up, Login and Reset Password
+## Sign up, Login and Reset Password
 
 All of the user normal user functions of:
 
@@ -301,7 +301,7 @@ All of the user normal user functions of:
 
 exist in both frontend and backend. As stated above in the "common/models` section I have found time and time again I want these in both backend and frontend, not just frontend.
 
-# Removing MongoDB 
+## Removing MongoDB 
 
 You can easily remove MongoDB from this template by removing the extension line from composer and then running:
 
