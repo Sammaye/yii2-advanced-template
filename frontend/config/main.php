@@ -12,6 +12,10 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+    	'session' => [
+    		'cookieParams' => [],
+    		'name' => 'sess_cookie'
+    	],
         'user' => [
             'enableTier2' => true,
             'tier2Timeout' => 3600 /* 10 mins */

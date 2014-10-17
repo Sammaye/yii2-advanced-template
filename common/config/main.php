@@ -1,5 +1,5 @@
 <?php
-$c = [
+return [
 	'timeZone' => 'Europe/London',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'extensions' => require(__DIR__ . '/../../vendor/yiisoft/extensions.php'),
@@ -48,12 +48,3 @@ $c = [
         ],
     ],
 ];
-
-if(PHP_SAPI != 'cli'){
-	$c['session'] = [
-		'cookieParams' => [],
-		'name' => 'sess_cookie'
-	];
-	$c['request'] = ['enableCsrfValidation' => false];
-}
-return $c;

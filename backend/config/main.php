@@ -13,6 +13,10 @@ return [
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
+    	'session' => [
+    		'cookieParams' => [],
+    		'name' => 'sess_cookie'
+    	],
         'request' => [
         	'class' => 'common\components\Request',
         	'enableCsrfValidation' => true,
