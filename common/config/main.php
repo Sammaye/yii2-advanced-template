@@ -1,5 +1,5 @@
 <?php
-return [
+$c = [
 	'timeZone' => 'Europe/London',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'extensions' => require(__DIR__ . '/../../vendor/yiisoft/extensions.php'),
@@ -9,16 +9,8 @@ return [
 			'identityClass' => 'common\models\User',
 			'enableAutoLogin' => true,
 		],
-    	'session' => [
-    		'cookieParams' => [
-    		],
-    		'name' => 'sess_cookie'
-    	],
         'cache' => [
             'class' => 'yii\caching\FileCache',
-        ],
-        'request' => [
-        	'enableCsrfValidation' => false
         ],
         'mailer' => [
 	        'viewPath' => '@common/mails',
@@ -56,3 +48,12 @@ return [
         ],
     ],
 ];
+
+if(PHP_SAPI != 'cli'){
+	$c['session'] = [
+		'cookieParams' => [],
+		'name' => 'sess_cookie'
+	];
+	$c['request'] = ['enableCsrfValidation' => false];
+}
+return $c;
